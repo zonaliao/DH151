@@ -6,16 +6,18 @@
 ## Link
 Link: https://covidstories.dailybruin.com/
 
-### What is the site's agenda?
+## What is the site's agenda?
 The site's agenda is to showcase college students around the world affected by COVID and their personal thoughts. It is a platform where students can share their experiences during quarantine in the past year. The site gathers data from the responses and takes into account what majority of student's feel about the situation through the most common words used and emotions felt during this troublesome time. 
 
-### Why does this website "speak" to you?
+## Why does this website "speak" to you?
+This website "speaks" to me because as a current college student, I can relate to so many of these reflections since I am going through a similar situation. It was created from UCLA's Daily Bruin staff to bring a sense of alone together during this pandemic. 
+
+## How does the mapping work, and does it “work?”
+
+### Does it do what it’s supposed to do?
 
 
-### How does the mapping work, and does it “work?” i.e., in your opinion, does it do what it’s supposed to do?
+## What technologies does the map use?
 
 
-### What technologies does the map use?
-
-
-### If you could change something, what would it be?
+## If you could change something, what would it be?
