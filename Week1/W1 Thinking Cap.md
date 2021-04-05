@@ -19,7 +19,7 @@ The mapping for this website works through student input, so whenever a student 
 I think it does what it is supposed to do well because students from all over can see that others from even different countries feel the same about the events that have occured since COVID-19. The number of people who have shared their stories on the map is shown with the different sized circles and tint based on location; I think that is an effective way to convey the information because students can see that they are not alone. 
 
 ## What technologies does the map use?
-I am not sure what technologies the map uses, but I think they probably used Google Maps or some other type of source such as leaflet to make the coding for this website simpler and to be able to have that zoom in and out effect. 
+This map uses "mapbox" to make the coding for this website simpler and to be able to have that zoom in and out effect. 
 
 ## If you could change something, what would it be?
 If I could change something, I would probably change the way the stories and data can be viewed so that even just looking at the map page the viewers can still get a feel about how most students are feeling in this situation. 
