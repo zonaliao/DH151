@@ -15,10 +15,44 @@
 <body>
 
 	<div class="header">
-		Travels
+		Memorable Places
 	</div>
 	<div class="sidebar">
-		Locations
+        <h2>
+            Locations
+        </h2>
+        <p>
+            <i>Places I have been to that are memorable to me.</i>
+        </p>
+            <b>Bay Area</b>
+            <br>
+            I grew up in the Bay Area!
+        </p>
+        <p>
+            <b>UCLA</b>
+            <br>
+            I have all my DMA classes at UCLA's Broad Art Center.
+        </p>
+        <p>
+            <b>Taiwan</b>
+            <br>
+            A lot of my relatives are in Taiwan and my parents were both born there and came to the US in their mid-20s.
+        </p>
+        <p>
+            <b>Japan</b>
+            <br>
+            Went to Japan when I was 8, but I threw up all over the airplane when we landed and was sick most of the trip. I didn't get to do much, so I really hope I can go back again someday to visit more places there!
+        </p>
+        <p>
+            <b>New York</b>
+            <br>
+            Went there for a summer camp and took the subway around with my family to visit all the tourist sites.
+        </p>
+        <p>
+            <b>Hawaii</b>
+            <br>
+            Visited all the popular sites in Hawaii during a family vacation! Some of my college friends live there too.
+        </p>
 	</div>
 	<div class="content">
 		<div id="map"></div>
@@ -28,33 +62,43 @@
 
         let data = [
             {
-                'title':'Osaka',
-                'lat': 34.6937,
-                'lon': 135.5023
+                'title':'Los Angeles',
+                'lat': 34.07561221545342,
+                'lon': -118.44121075468139
             },
             {
-                'title':'Cali',
-                'lat': 3.4516,
-                'lon': -76.5320
-            },
-            {
-                'title':'Bangkok',
-                'lat': 13.7563,
-                'lon': 100.5018
+                'title':'Taipei',
+                'lat': 25.032902690153133,
+                'lon': 121.56158478464933
             },
             {
                 'title':'Tokyo',
-                'lat': 35.6762,
-                'lon': 139.6503
+                'lat': 35.681993756251515,
+                'lon': 139.76319828070703
             },
             {
-                'title':'LA',
-                'lat': 34.0522,
-                'lon': -118.2437
+                'title':'Honolulu',
+                'lat': 21.304891789269327,
+                'lon': -157.8518278920092
+            },
+            {
+                'title':'New York',
+                'lat': 40.71208306034958,
+                'lon': -74.00613049278037
+            },
+            {
+                'title':'Cupertino',
+                'lat': 37.32313509329208,
+                'lon': -122.03184980666266
             }
         ]
 
-		var map = L.map('map').setView([34.0697,-118.4432], 17);
+        // loop through data
+        data.forEach(function(item){
+            console.log(item)
+        });
+
+		var map = L.map('map').setView([34.82507742547061, -7.109527587890626], 17);
 
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -62,10 +106,6 @@
 
 		var marker = L.marker([34.07561221545342, -118.44121075468139]).addTo(map)
 				.bindPopup('UCLA Broad Art Center<br> Where I have most of my DMA studio classes')
-                .openPopup();	
-                
-        var marker = L.marker([37.32313509329208, -122.03184980666266]).addTo(map)
-				.bindPopup('Bay Area<br> I grew up and went to school in the Bay Area')
                 .openPopup();	
 
         var marker = L.marker([25.032902690153133, 121.56158478464933]).addTo(map)
@@ -77,8 +117,16 @@
                 .openPopup();
                 
         var marker = L.marker([21.304891789269327, -157.8518278920092]).addTo(map)
-				.bindPopup('Hawaii<br> Visited Hawaii with my family before after graduating high school.')
-				.openPopup();
+				.bindPopup('Hawaii<br> Visited Hawaii with my family before after graduating high school')
+                .openPopup();
+        
+        var marker = L.marker([40.71208306034958, -74.00613049278037]).addTo(map)
+				.bindPopup('New York<br> Went to New York for a summer camp before and have cousins that live nearby there')
+                .openPopup();
+                
+        var marker = L.marker([37.32313509329208, -122.03184980666266]).addTo(map)
+				.bindPopup('Bay Area<br> I grew up and went to school in the Bay Area')
+                .openPopup();	
 
 	</script>
 
