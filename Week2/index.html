@@ -97,14 +97,14 @@
         data.forEach(function(item){
             console.log(item)
         });
+        
+        var map = L.map('map').setView([34.82507742547061, -7.109527587890626], 17);
 
-		var map = L.map('map').setView([34.82507742547061, -7.109527587890626], 17);
-
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
-
-		var marker = L.marker([34.07561221545342, -118.44121075468139]).addTo(map)
+        }).addTo(map);
+        
+        var marker = L.marker([34.07561221545342, -118.44121075468139]).addTo(map)
 				.bindPopup('UCLA Broad Art Center<br> Where I have most of my DMA studio classes')
                 .openPopup();	
 
