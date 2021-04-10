@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zona's Travels</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+	<div class="header">
+		Travels
+	</div>
+	<div class="sidebar">
+		Locations
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+
+	<script>
+
+        let data = [
+            {
+                'title':'Osaka',
+                'lat': 34.6937,
+                'lon': 135.5023
+            },
+            {
+                'title':'Cali',
+                'lat': 3.4516,
+                'lon': -76.5320
+            },
+            {
+                'title':'Bangkok',
+                'lat': 13.7563,
+                'lon': 100.5018
+            },
+            {
+                'title':'Tokyo',
+                'lat': 35.6762,
+                'lon': 139.6503
+            },
+            {
+                'title':'LA',
+                'lat': 34.0522,
+                'lon': -118.2437
+            }
+        ]
+
+		var map = L.map('map').setView([34.0697,-118.4432], 17);
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		var marker = L.marker([34.07561221545342, -118.44121075468139]).addTo(map)
+				.bindPopup('UCLA Broad Art Center<br> Where I have most of my DMA studio classes')
+                .openPopup();	
+                
+        var marker = L.marker([37.32313509329208, -122.03184980666266]).addTo(map)
+				.bindPopup('Bay Area<br> I grew up and went to school in the Bay Area')
+                .openPopup();	
+
+        var marker = L.marker([25.032902690153133, 121.56158478464933]).addTo(map)
+				.bindPopup('Taipei, Taiwan<br> I go to Taiwan to visit relatives and Tapei 101 is a super cool place to visit!')
+                .openPopup();
+
+        var marker = L.marker([35.681993756251515, 139.76319828070703]).addTo(map)
+				.bindPopup('Toyko, Japan<br> I went to Japan when I was 8 years old, but I threw up on the airplane and was basically sick the entire trip :( I really want to visit Japan again!')
+                .openPopup();
+                
+        var marker = L.marker([21.304891789269327, -157.8518278920092]).addTo(map)
+				.bindPopup('Hawaii<br> Visited Hawaii with my family before after graduating high school.')
+				.openPopup();
+
+	</script>
+
+
+</body>
+</html>
