@@ -60,74 +60,60 @@
 
 	<script>
 
+    var map = L.map('map').setView([34.82507742547061, -7.109527587890626], 17);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
         let data = [
             {
                 'title':'Los Angeles',
+                'description': 'UCLA Broad Art Center<br> Where I have most of my DMA studio classes',
                 'lat': 34.07561221545342,
                 'lon': -118.44121075468139
             },
             {
                 'title':'Taipei',
+                'description': 'I go to Taiwan to visit relatives and Tapei 101 is a super cool place to visit!',
                 'lat': 25.032902690153133,
                 'lon': 121.56158478464933
             },
             {
                 'title':'Tokyo',
+                'description': 'I went to Japan when I was 8 years old, but I threw up on the airplane and was basically sick the entire trip :( I really want to visit Japan again!',
                 'lat': 35.681993756251515,
                 'lon': 139.76319828070703
             },
             {
                 'title':'Honolulu',
+                'description': 'Visited Hawaii with my family before after graduating high school',
                 'lat': 21.304891789269327,
                 'lon': -157.8518278920092
             },
             {
                 'title':'New York',
+                'description': 'Went to New York for a summer camp before and have cousins that live nearby there',
                 'lat': 40.71208306034958,
                 'lon': -74.00613049278037
             },
             {
                 'title':'Cupertino',
+                'description': 'I grew up and went to school in the Bay Area',
                 'lat': 37.32313509329208,
                 'lon': -122.03184980666266
             }
         ]
 
-        // loop through data
-        data.forEach(function(item){
-            console.log(item)
-        });
-        
-        var map = L.map('map').setView([34.82507742547061, -7.109527587890626], 17);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-        
         var marker = L.marker([34.07561221545342, -118.44121075468139]).addTo(map)
-				.bindPopup('UCLA Broad Art Center<br> Where I have most of my DMA studio classes')
-                .openPopup();	
-
-        var marker = L.marker([25.032902690153133, 121.56158478464933]).addTo(map)
-				.bindPopup('Taipei, Taiwan<br> I go to Taiwan to visit relatives and Tapei 101 is a super cool place to visit!')
-                .openPopup();
-
-        var marker = L.marker([35.681993756251515, 139.76319828070703]).addTo(map)
-				.bindPopup('Toyko, Japan<br> I went to Japan when I was 8 years old, but I threw up on the airplane and was basically sick the entire trip :( I really want to visit Japan again!')
-                .openPopup();
-                
-        var marker = L.marker([21.304891789269327, -157.8518278920092]).addTo(map)
-				.bindPopup('Hawaii<br> Visited Hawaii with my family before after graduating high school')
-                .openPopup();
+			.bindPopup('UCLA Broad Art Center<br> Where I have most of my DMA studio classes')
+			.openPopup();
+		data.forEach(function(item){
+			var marker = L.marker([item.lat,item.lon]).addTo(map)
+				.bindPopup(item.title+'<br>'+item.description)
+				.openPopup();
+		});
         
-        var marker = L.marker([40.71208306034958, -74.00613049278037]).addTo(map)
-				.bindPopup('New York<br> Went to New York for a summer camp before and have cousins that live nearby there')
-                .openPopup();
-                
-        var marker = L.marker([37.32313509329208, -122.03184980666266]).addTo(map)
-				.bindPopup('Bay Area<br> I grew up and went to school in the Bay Area')
-                .openPopup();	
-
 	</script>
 
 
