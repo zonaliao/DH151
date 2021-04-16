@@ -1,7 +1,7 @@
 # Week 3 Thinking Cap
 
-## Screenshot
+## Reactions
 
 
-## Link
+## Questions:
 
