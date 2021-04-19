@@ -9,6 +9,7 @@ body,html {
 }
 
 body {
+	font-family: Arial, Helvetica, sans-serif;
 	display: grid;
 	grid-template-rows: 80px 1fr;
 	grid-template-columns: 20% 80%;
@@ -19,15 +20,16 @@ body {
 
 .header {
 	grid-area: header;
-	padding:10px;
-	background-color: rgb(84, 167, 219);
+	padding: 20px;
+	background-color: rgb(129, 173, 201);
 	color: white;
 	font-size: 2em;
 }
 
 .sidebar {
+	text-align: center;
 	grid-area: sidebar;
-	padding:10px;
+	padding: 20px;
 	background-color: lightblue;
 }
 
@@ -37,9 +39,14 @@ body {
 
 .sidebar-item {
 	padding: 10px;
-	background: gainsboro;
-	border: 1px solid gray;
-	margin: 5px;
-	color: #333;
+	background: rgb(148, 181, 223);
+	border-radius: 20px;
+	margin: 15px;
+	color: rgb(242, 241, 247);
+	text-align: center;
+}
 
+.sidebar-item:hover {
+	background-color: blue;
+	box-shadow: 5px 5px;
 }
