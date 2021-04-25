@@ -40,11 +40,10 @@ function mapCSV(data){
 
 	// circle options
 		let circleOptions = {
-			radius: 5,
+			radius: 10,
 			weight: 1,
-			color: 'white',
-			fillColor: 'dodgerblue',
-			fillOpacity: 1
+			color: 'purple',
+			fillColor: 'purple',
 		}
 	
 		// loop through each entry
