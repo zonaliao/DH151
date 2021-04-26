@@ -112,6 +112,6 @@ function createSidebarButtons(){
 
 	// loop through each date and create a hover-able button
 	dates.forEach(function(item,index){
-		$('.sidebar-content').append(`<span onmouseover="mapCSV('${item}')" class="sidebar-item" title="${item}">●</span>`)
+		$('.sidebar').append(`<span onmouseover="mapCSV('${item}')" class="sidebar-item" title="${item}">●</span>`)
 	})
 }
