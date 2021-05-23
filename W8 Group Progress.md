@@ -16,7 +16,9 @@ I think some additional features we are thinking about adding to our project wou
 Some concerns we have for our project would probably just be getting certain parts of the code to run the data that we want to showcase on our website like the top countries with the highest and lowest pollution levels.
 
 
+## What do you think about design justice? 
 
+## How might you apply it in your designs going forward?
 
 
 
