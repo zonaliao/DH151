@@ -17,7 +17,7 @@ Some concerns we have for our project would probably just be getting certain par
 
 
 ## What do you think about design justice? 
-I think that design justice is an interesting concept
+Since design has become such a huge part of our society today, I think design justice is an important part of it because 
 
 ## How might you apply it in your designs going forward?
 I will try to apply it in my designs moving forward by trying to incorporate more 
