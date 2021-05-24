@@ -83,6 +83,8 @@ function mapGeoJSON(field,num_classes,color,scheme){
 
 	// create the infopanel
 	createInfoPanel();
+
+	createTable();
 }
 
 function getStyle(feature){
@@ -169,7 +171,106 @@ function highlightFeature(e) {
 	}
 
 	info_panel.update(layer.feature.properties);
+	createDashboard(layer.feature.properties)
+}
 
+function createDashboard(properties){
+
+	// clear dashboard
+	$('.dashboard').empty();
+
+	console.log(properties)
+
+	// chart title
+	let title = 'Household income in '+properties['Qualifying Name'];
+
+	// data values
+	let data = [
+
+		properties['% Households: Less than $25,000'],
+		properties['% Households: $25,000 to $49,999'],
+		properties['% Households: $50,000 to $74,999'],
+		properties['% Households: $75,000 to $99,999'],
+		properties['% Households: $100,000 or More'],
+
+	];
+
+	// data fields
+	let fields = [
+
+		'% Less than $25,000',
+		'% $25,000 to $49,999',
+		'% $50,000 to $74,999',
+		'% $75,000 to $99,999',
+		'% $100,000 or More',
+		
+	];
+
+	// set chart options
+	let options = {
+		chart: {
+			type: 'pie',
+			height: 400,
+			width: 400,			
+			animations: {
+				enabled: true,
+			}
+		},
+		title: {
+			text: title,
+		},
+		series: data,
+		labels: fields,
+		legend: {
+			position: 'right',
+			offsetY: 0,
+			height: 230,
+		  }
+	};
+	
+	// create the chart
+	let chart = new ApexCharts(document.querySelector('.dashboard'), options)
+	chart.render()
+}
+
+function createTable(){
+
+	// empty array for our data
+	let datafortable = [];
+
+	// loop through the data and add the properties object to the array
+	geojson_data.features.forEach(function(item){
+		datafortable.push(item.properties)
+	})
+
+	// array to define the fields: each object is a column
+	let fields = [
+		{ name: "Qualifying Name", type: "text"},
+		{ name: '% Households: Less than $25,000', type: 'number'},
+		{ name: '% Households: $100,000 or More', type: 'number'},
+		{ name: 'Median Household Income (In 2019 Inflation Adjusted Dollars)', type: 'number'},
+	]
+ 
+	// create the table in our footer
+	$(".footer").jsGrid({
+		width: "100%",
+		height: "400px",
+		
+		editing: true,
+		sorting: true,
+		paging: true,
+		autoload: true,
+ 
+		pageSize: 10,
+		pageButtonCount: 5,
+ 
+		data: datafortable,
+		fields: fields,
+		rowClick: function(args) { 
+			console.log(args);
+			zoomTo(args.item.GEO_ID)
+		},
+	});
 }
 
 // on mouse out, reset the style, otherwise, it will remain highlighted
@@ -181,4 +282,12 @@ function resetHighlight(e) {
 // on mouse click on a feature, zoom in to it
 function zoomToFeature(e) {
 	map.fitBounds(e.target.getBounds());
+}
+
+function zoomTo(geoid){
+
+	let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.properties.GEO_ID === geoid)
+
+	map.fitBounds(zoom2poly[0].getBounds())
+
 }
