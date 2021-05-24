@@ -17,7 +17,7 @@ Some concerns we have for our project would probably just be getting certain par
 
 
 ## What do you think about design justice? 
-Since design has become such a huge part of our society today, I think design justice is an important part of it because 
+Since design has become such a huge part of our society today, I think design justice is an important part of it because a lot of the designs may not consider diversity or equality as a factor to incoporate into the design.
 
 ## How might you apply it in your designs going forward?
 I will try to apply it in my designs moving forward by trying to incorporate more 
