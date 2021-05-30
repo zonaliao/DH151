@@ -6,4 +6,4 @@ Your final thinking cap assignment is to submit your collective thoughts on our 
 
 Share your thoughts by reflecting on areas that had an impact on you as a researcher, as a technologist, as a designer, and as a human being. And let us know how this knowledge, coupled with the technological tools you have learned this quarter will empower you moving forward in life.
 
-
+All the speakers we had for this quarter brought a lot of different insight on each topic that they specified in. I really enjoyed all of them 
